@@ -8,11 +8,18 @@
     "run-migrations": "knex migrate:latest"
   },
   "dependencies": {
+    "@chakra-ui/next-js": "^2.2.0",
+    "@chakra-ui/react": "^2.8.2",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@hookform/resolvers": "^3.3.2",
     "axios": "^1.4.0",
+    "framer-motion": "^10.16.4",
     "knex": "^2.5.1",
     "next": "13.4.13",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-hook-form": "^7.48.2",
     "sqlite3": "^5.1.6",
     "yup": "^1.3.2"
   }
