@@ -1,8 +1,8 @@
-exports.up = function(knex) {
-  return knex.schema.createTable("greetings", function(table) {
-    table.increments("id");
-    table.string("body", 255).notNullable();
-  });
+exports.up = function (knex) {
+  return knex.schema.createTable('greetings', function (table) {
+    table.increments('id')
+    table.string('body', 255).notNullable()
+  })
 
   // equivalent to
   // return knex.raw(`
@@ -11,8 +11,8 @@ exports.up = function(knex) {
   //     \`body\` varchar(255) not null
   //   )
   // `);
-};
+}
 
-exports.down = function(knex) {
-  return knex.schema.dropTable("greetings");
-};
+exports.down = function (knex) {
+  return knex.schema.dropTable('greetings')
+}

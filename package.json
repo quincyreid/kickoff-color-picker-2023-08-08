@@ -5,7 +5,9 @@
   "scripts": {
     "dev": "next dev",
     "create-migration": "knex migrate:make",
-    "run-migrations": "knex migrate:latest"
+    "run-migrations": "knex migrate:latest",
+    "lint": "prettier . --check",
+    "lint:fix": "prettier . --write"
   },
   "dependencies": {
     "@chakra-ui/next-js": "^2.2.0",
@@ -22,5 +24,8 @@
     "react-hook-form": "^7.48.2",
     "sqlite3": "^5.1.6",
     "yup": "^1.3.2"
+  },
+  "devDependencies": {
+    "prettier": "^3.1.0"
   }
 }

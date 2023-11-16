@@ -1,7 +1,7 @@
-import Welcome from "../components/welcome";
+import Welcome from '../components/welcome'
 
 const Home = () => {
-  return <Welcome />;
-};
+  return <Welcome />
+}
 
-export default Home;
+export default Home
