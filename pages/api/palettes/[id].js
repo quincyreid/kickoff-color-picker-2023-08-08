@@ -1,4 +1,5 @@
 import knex from '../../../clients/knex'
+import { paletteSchema } from '../../../lib/schemas'
 
 export default async (req, res) => {
 	const { id } = req.query
@@ -15,6 +16,11 @@ export default async (req, res) => {
 				return res.status(500).json({ message: 'Internal Server Error' })
 			}
 		case 'PUT':
+			try {
+				await paletteSchema.validate(req.body)
+			} catch (error) {
+				return res.status(400).json({ message: error.message })
+			}
 			try {
 				const [updatedPalette] = await knex('palettes')
 					.where({ id })
